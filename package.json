@@ -1,0 +1,40 @@
+{
+  "name": "campjs-vii-2016",
+  "version": "0.0.0",
+  "private": true,
+  "description": "nature's best practices for distributed networks",
+  "main": "index.js",
+  "scripts": {
+    "build": "markdown-to-slides -t campjs-vii-2016 -d README.md -o index.html -s index.css -j index.js",
+    "watch": "npm run build -- -w",
+    "livereload": "wtch -d build -e html,css,png,gif,jpg | garnish --level debug",
+    "static": "ecstatic-lr .",
+    "start": "npm-run-all -p watch livereload static",
+    "push": "gh-pages -d example",
+    "deploy": "npm-run-all -s build push"
+  },
+  "browserify": {
+    "transform": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahdinosaur/campjs-vii-2016.git"
+  },
+  "keywords": [],
+  "author": "Mikey <michael.williams@enspiral.com> (http://dinosaur.is)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/ahdinosaur/campjs-vii-2016/issues"
+  },
+  "homepage": "https://github.com/ahdinosaur/campjs-vii-2016#readme",
+  "devDependencies": {
+    "ecstatic-lr": "^1.0.1",
+    "garnish": "^5.2.0",
+    "gh-pages": "^0.11.0",
+    "npm-run-all": "^1.6.0",
+    "wtch": "^4.0.1"
+  },
+  "dependencies": {
+    "markdown-to-slides": "^1.0.3"
+  }
+}
