@@ -12,8 +12,6 @@ i have no idea what i'm saying
 
 i will use imprecise terminology
 
-life is hard to kill (try killing the fungus spores in your fridge)
-
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 - http://www.ribbonfarm.com/2015/03/04/gardens-need-walls-on-boundaries-ritual-and-beauty/
 - http://networkcultures.org/unlikeus/resources/articles/what-is-a-federated-network/
@@ -26,6 +24,14 @@ life is hard to kill (try killing the fungus spores in your fridge)
 - local peer-to-peer networks
 
 ## introduction
+
+### nature
+
+life is hard to kill
+
+???
+
+try killing the fungus spores in your fridge
 
 ### systems
 
@@ -58,32 +64,58 @@ common solution to coordination problem
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 - https://en.wikipedia.org/wiki/Stigmergy
 
-> A stochastic event or system is one that is unpredictable due to the influence of a random variable.
+## communication
 
-- https://en.wikipedia.org/wiki/Stochastic
+### complex vs simple
 
-## ants discover tcp
+![](./complex-vs-simple-commmunication.png)
+
+### beeping
+
+![](./beeping.png)
+
+fly brains specialize cells with Max Independent Set
+
+???
+
+beeping: 
+
+> Beeping: The beeping model17 (Fig- re 2a) assumes the only message hat can be sent or received is a beep (a unary signal). The model assumes an anonymous broadcast network in which nodes have no knowledge about the topology of the network or even an upper bound on its size. In each time slot a node can either beep or be si- lent. At a particular time slot, beeping nodes receive no feedback (they can- not determine if other nodes beeped as well), while silent nodes can only differentiate between two states: none of its neighbors beeping, or at least one neighbor beeping. Such a model is also appropriate for cellular signaling net- works as discussed here.
+
+fly brains: developing fly brains select a subset of cells to become sensory bristles on the fly's forehead.
+
+- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
+
+### stone-age
+
+![](./stone-age.png)
+
+### population
+
+![](./population.png)
+
+harvester ants forage for food with Transmission Control Protocol (TCP)
+
+???
 
 > A recent study demonstrated that with limited communication, ants solve the foraging problem by implementing a version of the Transmission Control Protocol (TCP), which is used on the Internet to determine available bandwidth when routing packets. If packet acknowledgments (ACKs) are received quickly, the sender assumes bandwidth is available and boosts transmission; but if ACKs are returned slowly, the sender assumes the network is congested and throttles down transmission. Similarly, the important factor for the ants is the rate of antennal contacts (a binary indicator) between ants currently in the nest and successful ants (with food) returning to the nest. If the rate of contact is high, it implies food in the environment is plentiful, and thus outgoing ants also leave the nest at a faster rate.
 
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 - http://priceonomics.com/the-independent-discovery-of-tcpip-by-ants/
 
-## slime mold discover network routing
+## networks
+
+### routing
+
+![](./slime-mold-routing.jpg)
+
+???
 
 > Foraging slime molds have also been shown to adaptively adjust their networks of tubular junctions based on the distribution and availability of food sources in the area, which is typically unknown a priori. 52
 > Slime molds also forage using breadth-first search using real cellular material, which is later pruned when optimal paths are found.  
 
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 - http://www.wired.com/2010/01/slime-mold-grows-network-just-like-tokyo-rail-system/
-
-## networks
-
-### hierarchy
-
-alpha wolf is boss of pack, not 
-
-large molecule doesn't get bonus and become organelle
 
 ### fractals
 
@@ -107,21 +139,13 @@ example: brains are composed of fractal agents
 - https://blog.dinosaur.is/life-as-a-holon/
 - Aida, K., Natsume, W. and Futakata, Y. Distributed computing with hierarchical master-worker paradigm for parallel branch and bound algorithm.  In Proceedings of the 31 st International Symposium on Cluster Computing and the Grid.  IEEE Computer Society, Washington, DC, 2003.  
 
-## signals
+### leaders
 
-### beeping
+alpha wolf is boss of pack, not boss of all packs.
 
-![](./beeping.png)
+large molecule doesn't get bonus and become organelle
 
-### stone-age
-
-![](./stone-age.png)
-
-### population
-
-![](./population.png)
-
-## topology
+### handling failure
 
 instead of using sophisticated consensus algorithms, nature uses toplogical features to handle failures.
 
@@ -135,17 +159,36 @@ example: viruses, cells
 
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 
-## 
+### small worlds
 
-## message strategies
+![](./speed-vs-robustness.png)
 
-> message sizes are usually one bit or of constant size indicting that unlike many traditional distributed algorithms, biological processes do not use such an identifier to label the sender and receiver
+> A small-world network is a type of mathematical graph in which most nodes are not neighbors of one another, but most nodes can be reached from every other node by a small number of hops or steps
 
-blockchain message gossip
+???
 
-- https://en.wikipedia.org/wiki/Gossip_protocol
-- https://github.com/ssbc/scuttlebot
-- https://github.com/substack/swarmbot
+> Small-world properties are found in many real-world phenomena, including websites with navigation menus, food chains, electric power grids, metabolite processing networks, networks of brain neurons, voter networks, telephone call graphs, and social influence networks.
+>
+> Networks of connected proteins have small world properties such as power-law obeying degree distributions.[9] Similarly transcriptional networks, in which the nodes are genes, and they are linked if one gene has an up or down-regulatory genetic influence on the other, have small world network properties.[10]
+>
+>
+> It is hypothesized by some researchers such as Barabási that the prevalence of small world networks in biological systems may reflect an evolutionary advantage of such an architecture. One possibility is that small-world networks are more robust to perturbations than other network architectures. If this were the case, it would provide an advantage to biological systems that are subject to damage by mutation or viral infection.
+>
+> By contrast, in a random network, in which all nodes have roughly the same number of connections, deleting a random node is likely to increase the mean-shortest path length slightly but significantly for almost any node deleted. In this sense, random networks are vulnerable to random perturbations, whereas small-world networks are robust. However, small-world networks are vulnerable to targeted attack of hubs, whereas random networks cannot be targeted for catastrophic failure.
+>
+> Appropriately, viruses have evolved to interfere with the activity of hub proteins such as p53, thereby bringing about the massive changes in cellular behavior which are conducive to viral replication.
+
+https://en.wikipedia.org/wiki/Small-world_network
+
+### randomized
+
+![](deterministic-vs-randomized-algorithms)
+
+???
+
+> A stochastic event or system is one that is unpredictable due to the influence of a random variable.
+
+- https://en.wikipedia.org/wiki/Stochastic
 
 ## problem with globals (social)
 
@@ -169,6 +212,14 @@ reality is subjective and local.
 - cost of Ethereum global computation is large amounts of duplicate memory and CPU work in computation cycles
 - distributed hash tables are easy to spam
 
+???
+
+> The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.
+
+https://docs.meshwith.me/project-goals.html
+
+- https://blog.dinosaur.is/global-vs-local-systems/
+
 ## local > global
 
 > On the biological side, as technology continues to improve and sheds light on molecular and cellular decision-making, we believe computational perspectives will be essential to understand how local, distributed rules give rise to robust, global systems.
@@ -178,11 +229,13 @@ reality is subjective and local.
 global networks of ant colonies
 global ecology
 
-## example: peer-to-intermediatary-to-peer
+### example: communication in the past
+
+### example: peer-to-intermediatary-to-peer
 
 i have phone, you have phone, we can't connect because base station is down.
 
-## example: buying a bicycle
+### example: buying a bicycle
 
 let's say i'm buying a bicycle from a neighbor.
 
@@ -190,20 +243,33 @@ why should i have to connect to some random strangers to participate in a global
 
 it's likely that i'm within a very few degrees of separation from my neighbor, i should gossip through this local network.
 
-## systems in the past
+## strategies
 
-## systems of the future
+### systems of the future
 
 - networks: you connect to local agents (based on social or geographic proximity)
 - messages: you say subjective statements
-- signals: you use local gossip protocols
+- signals: you use gossip protocols
 
-## example: B.A.T.M.A.N
+### local agents
+
+### subjective statements
+
+### gossip protocols
+
+> message sizes are usually one bit or of constant size indicting that unlike many traditional distributed algorithms, biological processes do not use such an identifier to label the sender and receiver
+
+blockchain message gossip
+
+- https://en.wikipedia.org/wiki/Gossip_protocol
+- https://github.com/ssbc/scuttlebot
+- https://github.com/substack/swarmbot
+
+### example: B.A.T.M.A.N
 
 https://en.wikipedia.org/wiki/B.A.T.M.A.N.
 
-## example: secure-scuttlebutt / Patchwork
-
+### example: secure-scuttlebutt / Patchwork
 
 ## thanks
 
@@ -213,7 +279,7 @@ https://en.wikipedia.org/wiki/B.A.T.M.A.N.
 - [scuttlebot](https://scuttlebot.io): underlying peer-to-peer log store
 - [Value Flows](https://valueflo.ws): protocols for fractal socio-economic systems
 
-# notes
+# leftover content (notes)
 
 ## agent trust networks
 
@@ -236,3 +302,4 @@ Also, no-one can stop you talking with friends... and you don't need to be able 
 ## other links
 
 - https://github.com/du5t/spaceship
+- http://artbrock.com/blog/perspectives-blockchains-and-cryptocurrencies
