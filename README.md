@@ -1,12 +1,17 @@
 # nature's best practices for distributed systems
 
-TODO get local remark copy
-
 ## hi
 
-i'm [Mikey (@ahdinosaur)](http://dinosaur.is)
+i'm [Mikey (@ahdinosaur)](http://dinosaur.is) from [Enspiral](http://enspiral.com)
 
-from [Enspiral](http://enspiral.com)
+<div class="row">
+  <a href="http://dinosaur.is.com">
+    <img alt="Mikey's avatar" src="./avatar.jpeg" width="200" />
+  </a>
+  <a href="http://enspiral.com">
+    <img alt="Enspiral logo" src="./enspiral.png" width="200" />
+  </a>
+</div>
 
 ???
 
@@ -27,60 +32,80 @@ i will use imprecise terminology
 
 ## introduction
 
-### nature
-
-life is hard to kill
-
-???
-
-try killing the fungus spores in your fridge
-
 ### systems 101
 
 - networks: who you connect to
 - messages: what you say
-- signals: how you connect
+- signaling: how you connect
 
-example: our global socio-economic system
+examples: 
+
+- ecological systems
+- socio-economic systems
+- political systems
 
 ???
 
+### why nature?
+
+nature is better at distributed systems than we are.
+
+???
+
+life is hard to kill: try killing the fungus spores in your fridge
+
+the planet will survive climate change, will we?
+
 ### coordination problems
 
->  Coordination problems are cases in which everyone agrees that a certain action would be best, but the free market cannot coordinate them into taking that action.
+a coordination problem is where:
+
+- everyone agrees that certain actions would be best
+- not everyone is coordinated in taking those actions
+
+example: climate change
+
+???
+
+> Coordination problems are cases in which everyone agrees that a certain action would be best, but the free market cannot coordinate them into taking that action.
+
+- http://www.raikoth.net/libertarian.html#coordination_problems
 
 every intelligent person knows climate change is a problem to be solved.
 
 yet we're not doing enough to solve it.
 
-???
-
-- http://www.raikoth.net/libertarian.html#coordination_problems
-
-## natural networks
-
-### stigmergy over control
+### stigmergy
 
 central planning and control is a common solution to coordination problems.
 
-> Most biological systems are distributed and must make decisions and respond to stimuli without a centralized coordinator and under severe constraints (energy conservation, limited communication range, limited messaging language, among others)
+yet biological systems make decisions and respond to stimuli:
+
+- without a centralized coordinator
+- under severe constraints
 
 ???
+
+> Most biological systems are distributed and must make decisions and respond to stimuli without a centralized coordinator and under severe constraints (energy conservation, limited communication range, limited messaging language, among others)
 
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 - https://en.wikipedia.org/wiki/Stigmergy
 
+## natural networks
+
 ### simple over complex
+
+<img class="center" src="./complex-vs-simple-communication.png" height="500" />
+
+???
 
 rather than sophisticated synchronous protocols (like the OAuth dance),
 
 most natural systems communicate with simple asynchronous messages
 
-![](./complex-vs-simple-commmunication.png)
-
 ### randomized over deterministic
 
-![](deterministic-vs-randomized-algorithms)
+<img class="center" src="./deterministic-vs-randomized-algorithms.png" height="500" />
 
 ???
 
@@ -90,7 +115,7 @@ most natural systems communicate with simple asynchronous messages
 
 ### beeping
 
-![](./beeping.png)
+<img class="center" src="./beeping.png" height="500" />
 
 fly brains specialize cells with Max Independent Set
 
@@ -106,11 +131,11 @@ fly brains: developing fly brains select a subset of cells to become sensory bri
 
 ### stone-age
 
-![](./stone-age.png)
-
-![](./slime-mold-routing.jpg)
+<img class="center" src="./stone-age.png" height="500" />
 
 ???
+
+![](./slime-mold-routing.jpg)
 
 > Foraging slime molds have also been shown to adaptively adjust their networks of tubular junctions based on the distribution and availability of food sources in the area, which is typically unknown a priori. 52
 > Slime molds also forage using breadth-first search using real cellular material, which is later pruned when optimal paths are found.  
@@ -120,7 +145,7 @@ fly brains: developing fly brains select a subset of cells to become sensory bri
 
 ### population
 
-![](./population.png)
+<img class="center" src="./population.png" height="500" />
 
 harvester ants forage for food with Transmission Control Protocol (TCP)
 
@@ -133,7 +158,17 @@ harvester ants forage for food with Transmission Control Protocol (TCP)
 
 ### fractals
 
-example: human organism -> organs -> tissues -> cells -> organelles -> large molecules -> small molecules -> atoms -> particles
+example:
+
+- human organism
+- -> organs
+- -> tissues
+- -> cells
+- -> organelles
+- -> large molecules
+- -> small molecules
+- -> atoms
+- -> particles
 
 ???
 
@@ -201,17 +236,14 @@ process them.
 
 ## global distributed networks
 
-???
-
-- https://blog.dinosaur.is/global-vs-local-systems/
-
 ### example: internet service providers
 
 > The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.
 
+- [cjdns project goals](https://docs.meshwith.me/project-goals.html)
+
 ???
 
-https://docs.meshwith.me/project-goals.html
 
 - Pakistani ISP uses BGP to blackhole internet
 
@@ -243,6 +275,8 @@ with Bitcoin, i have to send a message to random strangers (miners) to participa
 - within a very few degrees of trust separation from my neighbor, we could be doing local consensus
 - cost of Ethereum global computation is large amounts of duplicate memory and CPU work in computation cycles
 
+https://blog.dinosaur.is/global-vs-local-systems/
+
 ### example: downloading a file with Bittorrent
 
 when i download a file with Bittorrent, i connect to random strangers.
@@ -253,28 +287,17 @@ this means it's easy to monitor who is downloading what.
 
 since everyone is connected to everyone, there's no barrier to abusing someone on Twitter.
 
-the victim is the one who has to signal a block, rather than permit the message before.
+the victim (defender) is the one who has to expend energy rather than offender.
 
 ???
+
+open by default
 
 - also easy to spam
   - email
   - distributed hash tables
 
-### example: global socio-economic networks
-
-the economy is converging on mega-corporations, at the expense of small business.
-
-many of these mega-corps act as middleman within closed markets: Uber.
-
-???
-
-- peer -> middleman -> peer
-  - where middleman sets price for both supplier and consumer
-  - workers on both sides assume all risk, no risk for middleman
-- winner-take-all effects of global networks (Uber)
-
-### example: global culture
+### example: monoculture
 
 the world is converging on a uniform culture, at the expense of diversity.
 
@@ -305,15 +328,13 @@ reality is subjective and local.
 
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 
-- global networks of ant colonies
 - planet ecology
-
 
 ### systems of the future
 
 - networks: you connect to local agents (based on social or geographic proximity)
 - messages: you say things subjective to your view
-- signals: you use gossip protocols to relay information
+- signaling: you use gossip protocols to relay information
 
 ### local agents
 
@@ -323,7 +344,7 @@ reality is subjective and local.
   - [community](http://devacademy.co.nz)
   - [network](http://enspiral.com)
 - regional
-  - suburb
+  - subhurb
   - city
   - state
 
@@ -368,9 +389,11 @@ peer-to-peer social network:
 - each user can create "about" messages for any other user (name, avatar, ...)
 - any user can create "post" messages which provide Twitter / Facebook style communication
 
-also [git-ssb](https://github.com/clehner/git-ssb) and [git-ssb-web](https://github.com/clehner/git-ssb-web), which replicates git and GitHub, respectively.
+### example: [git-ssb](https://github.com/clehner/git-ssb)
 
-### demo
+decentralized GitHub!
+
+### demos
 
 ## thanks
 
@@ -379,38 +402,3 @@ also [git-ssb](https://github.com/clehner/git-ssb) and [git-ssb-web](https://git
 - [Patchwork](https://ssbc.github.io/patchwork): proof-of-concept for truly distributed social network
 - [scuttlebot](https://scuttlebot.io): underlying peer-to-peer log store
 - [Value Flows](https://valueflo.ws): protocols for fractal socio-economic systems
-
-# leftover content (notes)
-
-## agent trust networks
-
-> @dominictarr: you just interact with your friends, etc, and following someone is basically saying "this user is a real human, not a bot, and not a scammer" That is a expression of trust. Sometimes they may make a mistake, and trust someone who turns out to be a jerk, for this reason, trust must be revokeable.
-Thus, instead of just signing each other's keys (as in gpg) we need to be able to sign a variety of statements about those keys. Those keys must also sign statements about other things (posts, or links to external files etc) so that the statements about those external things are tied into a specific context.
-
-- https://github.com/ssbc/secure-scuttlebutt/issues/65#issuecomment-64903674
-
-> @mixmix: My favourite way of thinking about all this is that truly decentralised p2p is actually alarmingly similar to your everyday social interactions - no-one is really a boss, anyone can lie, trust matters, and you ignore stuff and people that have bad reputation.
-Also, no-one can stop you talking with friends... and you don't need to be able to reach america to be able to talk
-
-- http://hyper.mixmix.io/?source=https%253A%252F%252Fgithub.com%252Fmixmix%252Fblogposts%252Fblob%252Fmaster%252Funcapturable_distribution.md
-
-## permaculture
-
-- symbiotic relationships
-  - companion planting (e.g. carrots with sage)
-  - 1 + 1 = 3
-
-### leaders
-
-alpha wolf is boss of pack, not boss of all packs.
-
-large molecule doesn't get bonus and become organelle
-
-## other links
-
-- https://github.com/du5t/spaceship
-- http://artbrock.com/blog/perspectives-blockchains-and-cryptocurrencies
-
-### example: B.A.T.M.A.N
-
-https://en.wikipedia.org/wiki/B.A.T.M.A.N.

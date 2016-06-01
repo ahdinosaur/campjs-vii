@@ -5,9 +5,9 @@
   "description": "nature's best practices for distributed networks",
   "main": "index.js",
   "scripts": {
-    "build": "markdown-to-slides -t campjs-vii-2016 -d README.md -o index.html -s index.css -j index.js",
+    "build": "markdown-to-slides -t campjs-vii-2016 -d README.md -o index.html -s index.css -j index.js -i",
     "watch": "npm run build -- -w",
-    "livereload": "wtch -d build -e html,css,png,gif,jpg | garnish --level debug",
+    "livereload": "wtch -d . -e html,css,png,gif,jpg | garnish --level debug",
     "static": "ecstatic-lr .",
     "start": "npm-run-all -p watch livereload static",
     "push": "gh-pages -d example",
