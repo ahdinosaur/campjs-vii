@@ -10,8 +10,9 @@
     "livereload": "wtch -d . -e html,css,png,gif,jpg | garnish --level debug",
     "static": "ecstatic-lr .",
     "start": "npm-run-all -p watch livereload static",
-    "push": "gh-pages -d example",
-    "deploy": "npm-run-all -s build push"
+    "dist": "mkdir -p dist && bash -c 'cp *.{js,html,css,png,jpg,jpeg} dist'",
+    "push": "gh-pages -d dist",
+    "deploy": "npm-run-all -s dist build push"
   },
   "browserify": {
     "transform": []

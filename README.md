@@ -197,7 +197,9 @@ example:
 
 brains are composed of fractal agents
 
-<img class="center" src="./agency-in-the-brain.png" height="450" />
+<a href="http://www.meltingasphalt.com/neurons-gone-wild/">
+  <img class="center" src="./agency-in-the-brain.png" height="450" />
+</a>
 
 ???
 
@@ -370,7 +372,9 @@ blockchain message gossip
 
 ### example: secure scuttlebutt (SSB)
 
-peer-to-peer log store:
+peer-to-peer log store
+
+???
  
 - each user has a feed associated with a public and private keypair
 - each feed is a linked list of message signed with the associated private key
@@ -382,7 +386,9 @@ peer-to-peer log store:
 
 ### example: Patchwork
 
-peer-to-peer social network:
+peer-to-peer social network
+
+???
 
 - each user can create "about" messages for any other user (name, avatar, ...)
 - any user can create "post" messages which provide Twitter / Facebook style communication
@@ -395,7 +401,7 @@ decentralized GitHub!
 
 ## thanks
 
-:3
+=^.^=
 
 - [Patchwork](https://ssbc.github.io/patchwork): proof-of-concept for truly distributed social network
 - [scuttlebot](https://scuttlebot.io): underlying peer-to-peer log store
