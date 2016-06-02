@@ -13,6 +13,41 @@ many of these mega-corps act as middleman within closed markets: Uber.
   - workers on both sides assume all risk, no risk for middleman
 - winner-take-all effects of global networks (Uber)
 
+### stone-age
+
+<img class="center" src="./stone-age.png" height="450" />
+
+???
+
+- also anonymous network
+- nodes can count up according to one-two-many principle
+
+
+### beeping
+
+fly brains specialize cells with Max Independent Set
+
+<img class="center" src="./beeping.png" height="450" />
+
+???
+
+beeping: 
+
+- only message sent or received is a beep (unary signal)
+- anonymous broadcast network where nodes have no knowledge of topology or size
+- in each time slot, a node can either beep or be silent
+- beeping nodes cannot determine if other nodes beeped as well
+- silent nodes can only differentiate between no neighbors beeping or at least one neighbors beeping
+
+fly brains: developing fly brains select a subset of cells to become sensory bristles on the fly's forehead.
+
+- cell differentiation
+
+
+### population
+
+<img class="center" src="./population.png" height="500" />
+
 ### example: brain
 
 blood-brain barrier protects brain from bad actors.

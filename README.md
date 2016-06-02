@@ -17,7 +17,7 @@ slides are available at <http://dinosaur.is/campjs-vii>.
 
 ???
 
-i have no idea what i'm saying
+first time presenting at a conference
 
 i will use imprecise terminology
 
@@ -26,8 +26,8 @@ much help from ["Distributed Information Processing in Biological and Computatio
 ## overview
 
 - introduction to systems
-- natural systems
-- global distributed systems
+- popular distributed systems
+- natural distributed systems
 - local distributed systems
 
 ## introduction to systems
@@ -45,6 +45,23 @@ examples:
 - political systems
 
 ???
+
+### coordination problems
+
+a [coordination problem](http://www.raikoth.net/libertarian.html#coordination_problems) is where:
+
+- everyone agrees that certain actions would be best
+- not everyone is coordinated in taking those actions
+
+example: climate change
+
+???
+
+distributed systems can be seen as attempts to solve coordination problems
+
+every intelligent person knows climate change is a problem to be solved.
+
+yet we're not doing enough to solve it.
 
 ### why nature?
 
@@ -64,23 +81,6 @@ there's no question that the planet will survive climate change,
 
 the question is whether we will.
 
-### coordination problems
-
-a [coordination problem](http://www.raikoth.net/libertarian.html#coordination_problems) is where:
-
-- everyone agrees that certain actions would be best
-- not everyone is coordinated in taking those actions
-
-example: climate change
-
-???
-
-distributed systems can be seen as attempts to solve coordination problems
-
-every intelligent person knows climate change is a problem to be solved.
-
-yet we're not doing enough to solve it.
-
 ### [stigmergy](https://en.wikipedia.org/wiki/Stigmergy)
 
 central planning and control is a common solution to coordination problems.
@@ -96,164 +96,21 @@ yet biological systems coordinate:
 
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 
-## natural systems
+## popular distributed networks
 
-### simple over complex
-
-<img class="center" src="./complex-vs-simple-communication.png" height="500" />
-
-???
-
-rather than sophisticated synchronous protocols (like the OAuth dance),
-
-most natural systems communicate with simple asynchronous messages
-
-### randomized over deterministic
-
-<img class="center" src="./deterministic-vs-randomized-algorithms.png" height="500" />
-
-???
-
-> A [stochastic](https://en.wikipedia.org/wiki/Stochastic) event or system is one that is unpredictable due to the influence of a random variable.
-
-### beeping
-
-fly brains specialize cells with Max Independent Set
-
-<img class="center" src="./beeping.png" height="450" />
-
-???
-
-beeping: 
-
-- only message sent or received is a beep (unary signal)
-- anonymous broadcast network where nodes have no knowledge of topology or size
-- in each time slot, a node can either beep or be silent
-- beeping nodes cannot determine if other nodes beeped as well
-- silent nodes can only differentiate between no neighbors beeping or at least one neighbors beeping
-
-fly brains: developing fly brains select a subset of cells to become sensory bristles on the fly's forehead.
-
-- cell differentiation
-
-### stone-age
-
-<img class="center" src="./stone-age.png" height="450" />
-
-???
-
-- also anonymous network
-- nodes can count up according to one-two-many principle
-
-### example: slime mold
-
-slime mold forages for food with a routing network
-
-<img class="center" src="./slime-mold-routing.jpg" height="450" />
-
-???
-
-- forage for food using bread-first search with cellular material
-- network adapts by pruning when optimal paths are found
-
-### population
-
-<img class="center" src="./population.png" height="500" />
-
-harvester ants forage for food with Transmission Control Protocol (TCP)
-
-???
-
-> A recent study demonstrated that with limited communication, ants solve the foraging problem by implementing a version of the Transmission Control Protocol (TCP), which is used on the Internet to determine available bandwidth when routing packets. If packet acknowledgments (ACKs) are received quickly, the sender assumes bandwidth is available and boosts transmission; but if ACKs are returned slowly, the sender assumes the network is congested and throttles down transmission. Similarly, the important factor for the ants is the rate of antennal contacts (a binary indicator) between ants currently in the nest and successful ants (with food) returning to the nest. If the rate of contact is high, it implies food in the environment is plentiful, and thus outgoing ants also leave the nest at a faster rate.
-
-- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
-- http://priceonomics.com/the-independent-discovery-of-tcpip-by-ants/
-
-### fractals
-
-example:
-
-- human organism
-- <- organs
-- <- tissues
-- <- cells
-- <- organelles
-- <- large molecules
-- <- small molecules
-- <- atoms
-- <- particles
-
-???
-
-- individual
-- -> family
-- -> village
-- -> subhurb
-- -> city
-- -> region
-- -> state
-
-### example: human brain
-
-brains are composed of fractal agents
-
-<a href="http://www.meltingasphalt.com/neurons-gone-wild/">
-  <img class="center" src="./agency-in-the-brain.png" height="450" />
-</a>
-
-???
-
-> For our purposes, an agent is an entity capable of autonomous, intelligent, goal-directed behavior.
-
-### [small worlds](https://en.wikipedia.org/wiki/Small-world_network)
-
-<img class="center" src="./speed-vs-robustness.png" height="500" />
-
-???
-
-a small-world network is where most nodes are not neighbors, but most nodes can be reached by every other node by a small number of hops
-
-dense toplogies are used when little-to-no noise is expected, sparse toplogies are preferred when noise is expected.
-
-examples:
-
-- [Wikipedia game](http://thewikigame.com/)
-- 6 degrees of Kevin Bacon
-  - social influence networks
-- activity-dependent plasticity of synapses
-  - neural networks are shaped by environmental stimuli
-  - input streams into the neural network and changes the toplogy of how it is processed
-
-### handling failure
-
-instead of using sophisticated consensus algorithms, nature uses toplogical features to handle failures.
-
-<img class="center" src="./toplogy-on-speed-and-robustness.png" height="400" />
-
-???
-
-sparse toplogies are less efficient, but more resilient as can isolate problems by changing toplogy.
-
-example:
-
-- protection against viruses
-  - which is why viruses have evolved to interfere with activity of hub proteins such as p53
-
-## global distributed networks
-
-### example: internet service providers
+### [example: internet service providers](http://research.dyn.com/2010/11/chinas-18-minute-mystery/)
 
 > The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.
 
-- [cjdns project goals](https://docs.meshwith.me/project-goals.html)
+from [cjdns project goals](https://docs.meshwith.me/project-goals.html)
 
 ???
 
-- Pakistani ISP uses BGP to blackhole internet
+- [Pakistani ISP uses BGP to blackhole internet](http://www.cnet.com/news/how-pakistan-knocked-youtube-offline-and-how-to-make-sure-it-never-happens-again/)
 
-### example: global registries
+### example: name registries
 
-CA certs and DNS are based on central registries.
+DNS is a central name registry.
 
 Namecoin distributes the protocol, but not the registry.
 
@@ -313,6 +170,128 @@ the world is converging on a uniform culture, at the expense of diversity.
 - endangered animals
 - [endangered languages](https://github.com/RichardLitt/endangered-languages)
 - [technical debt of the west](http://www.meltingasphalt.com/technical-debt-of-the-west/)
+
+
+## natural distributed systems
+
+### simple over complex
+
+<img class="center" src="./complex-vs-simple-communication.png" height="500" />
+
+???
+
+rather than sophisticated synchronous protocols (like the OAuth dance),
+
+most natural systems communicate with simple asynchronous messages
+
+### randomized over deterministic
+
+<img class="center" src="./deterministic-vs-randomized-algorithms.png" height="500" />
+
+???
+
+> A [stochastic](https://en.wikipedia.org/wiki/Stochastic) event or system is one that is unpredictable due to the influence of a random variable.
+
+### [small world](https://en.wikipedia.org/wiki/Small-world_network) topology
+
+<img class="center" src="./speed-vs-robustness.png" height="500" />
+
+???
+
+a small-world network is where most nodes are not neighbors, but most nodes can be reached by every other node by a small number of hops
+
+dense toplogies are used when little-to-no noise is expected, sparse toplogies are preferred when noise is expected.
+
+examples:
+
+- [Wikipedia game](http://thewikigame.com/)
+- 6 degrees of Kevin Bacon
+  - social influence networks
+- activity-dependent plasticity of synapses
+  - neural networks are shaped by environmental stimuli
+  - input streams into the neural network and changes the toplogy of how it is processed
+
+### speed vs robustness
+
+instead of using sophisticated consensus algorithms, nature uses toplogical features to handle failures.
+
+<img class="center" src="./toplogy-on-speed-and-robustness.png" height="400" />
+
+???
+
+sparse toplogies are less efficient, but more resilient as can isolate problems by changing toplogy.
+
+example:
+
+- protection against viruses
+  - which is why viruses have evolved to interfere with activity of hub proteins such as p53
+
+### fractal scaling
+
+example:
+
+- human organism
+- <- organs
+- <- tissues
+- <- cells
+- <- organelles
+- <- large molecules
+- <- small molecules
+- <- atoms
+- <- particles
+
+???
+
+- individual
+- -> family
+- -> village
+- -> subhurb
+- -> city
+- -> region
+- -> state
+
+### [example: slime mold](http://www.wired.com/2010/01/slime-mold-grows-network-just-like-tokyo-rail-system/)
+
+slime mold forages for food with a routing network
+
+<img class="center" src="./slime-mold-routing.jpg" height="450" />
+
+???
+
+- forage for food using bread-first search with cellular material
+- network adapts by pruning when optimal paths are found
+
+### [example: harvester ants](http://priceonomics.com/the-independent-discovery-of-tcpip-by-ants/)
+
+harvester ants forage for food with Transmission Control Protocol (TCP)
+
+<a href="https://www.flickr.com/photos/jurvetson/2067467/in/photostream//">
+  <img class="center" src="./ants.jpg" height="450" />
+</a>
+
+???
+
+- TCP is an Internet protocol that transports packets based on available bandwidth
+- if packet acknowledgemenets (ACKs) are received quickly, the sender assumes bandwidth is available and boosts transmission
+- if ACKs are returned slowly, the sender assumes the network is congested and throttles down transmission
+- a set of harvester ants go out in the morning, and don't return unless they find food
+- a successful ant (with food) ACKs by contacting antenna with ants in the nest
+- if the rate of contact is high, food is plentiful, and thus outgoing ants leave at a faster rate
+
+### example: human brain
+
+brains are composed of fractal agents
+
+<a href="http://www.meltingasphalt.com/neurons-gone-wild/">
+  <img class="center" src="./agency-in-the-brain.png" height="450" />
+</a>
+
+???
+
+- an agent is an entity capable of autonomous, intelligent, goal-directed behavior
+- neurons sample from probabilistic not deterministic inference
+- neurons fire based on one-two-many principle
+- efficiently encode information as toplogical data
 
 ## local peer-to-peer networks
 
