@@ -90,7 +90,14 @@ yet biological systems coordinate:
 
 ???
 
-> [Most biological systems are distributed and must make decisions and respond to stimuli without a centralized coordinator and under severe constraints (energy conservation, limited communication range, limited messaging language, among others)](http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract)
+contraints like:
+
+- energy conservation
+- limited communication range
+- limited messaging language
+- ...
+
+keep this biogical principle in mind.
 
 ## popular distributed networks
 
@@ -289,7 +296,7 @@ brains are composed of fractal agents
 - neurons fire based on one-two-many principle
 - efficiently encode information as toplogical data
 
-## local peer-to-peer networks
+## local distributed networks
 
 ### why local?
 
