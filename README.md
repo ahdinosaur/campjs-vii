@@ -13,24 +13,24 @@ i'm [Mikey (@ahdinosaur)](http://dinosaur.is) from [Enspiral](http://enspiral.co
   </a>
 </div>
 
+slides are available at <http://dinosaur.is/campjs-vii>.
+
 ???
 
 i have no idea what i'm saying
 
 i will use imprecise terminology
 
-- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
-- http://www.ribbonfarm.com/2015/03/04/gardens-need-walls-on-boundaries-ritual-and-beauty/
-- http://networkcultures.org/unlikeus/resources/articles/what-is-a-federated-network/
+much help from ["Distributed Information Processing in Biological and Computation Systems"](http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract) paper
 
 ## overview
 
-- introduction
-- natural networks
-- global peer-to-peer networks
-- local peer-to-peer networks
+- introduction to systems
+- natural systems
+- global distributed systems
+- local distributed systems
 
-## introduction
+## introduction to systems
 
 ### systems 101
 
@@ -50,15 +50,23 @@ examples:
 
 nature is better at distributed systems than we are.
 
+<img
+  alt="view of Earth from space, centered on Australia"
+  src="earth.jpg"
+  width="400"
+/>
+
 ???
 
 life is hard to kill: try killing the fungus spores in your fridge
 
-the planet will survive climate change, will we?
+there's no question that the planet will survive climate change,
+
+the question is whether we will.
 
 ### coordination problems
 
-a coordination problem is where:
+a [coordination problem](http://www.raikoth.net/libertarian.html#coordination_problems) is where:
 
 - everyone agrees that certain actions would be best
 - not everyone is coordinated in taking those actions
@@ -67,21 +75,19 @@ example: climate change
 
 ???
 
-> Coordination problems are cases in which everyone agrees that a certain action would be best, but the free market cannot coordinate them into taking that action.
-
-- http://www.raikoth.net/libertarian.html#coordination_problems
+distributed systems can be seen as attempts to solve coordination problems
 
 every intelligent person knows climate change is a problem to be solved.
 
 yet we're not doing enough to solve it.
 
-### stigmergy
+### [stigmergy](https://en.wikipedia.org/wiki/Stigmergy)
 
 central planning and control is a common solution to coordination problems.
 
-yet biological systems make decisions and respond to stimuli:
+yet biological systems coordinate:
 
-- without a centralized coordinator
+- without central control
 - under severe constraints
 
 ???
@@ -89,9 +95,8 @@ yet biological systems make decisions and respond to stimuli:
 > Most biological systems are distributed and must make decisions and respond to stimuli without a centralized coordinator and under severe constraints (energy conservation, limited communication range, limited messaging language, among others)
 
 - http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
-- https://en.wikipedia.org/wiki/Stigmergy
 
-## natural networks
+## natural systems
 
 ### simple over complex
 
@@ -109,39 +114,47 @@ most natural systems communicate with simple asynchronous messages
 
 ???
 
-> A stochastic event or system is one that is unpredictable due to the influence of a random variable.
-
-- https://en.wikipedia.org/wiki/Stochastic
+> A [stochastic](https://en.wikipedia.org/wiki/Stochastic) event or system is one that is unpredictable due to the influence of a random variable.
 
 ### beeping
 
-<img class="center" src="./beeping.png" height="500" />
-
 fly brains specialize cells with Max Independent Set
+
+<img class="center" src="./beeping.png" height="450" />
 
 ???
 
 beeping: 
 
-> Beeping: The beeping model17 (Fig- re 2a) assumes the only message hat can be sent or received is a beep (a unary signal). The model assumes an anonymous broadcast network in which nodes have no knowledge about the topology of the network or even an upper bound on its size. In each time slot a node can either beep or be si- lent. At a particular time slot, beeping nodes receive no feedback (they can- not determine if other nodes beeped as well), while silent nodes can only differentiate between two states: none of its neighbors beeping, or at least one neighbor beeping. Such a model is also appropriate for cellular signaling net- works as discussed here.
+- only message sent or received is a beep (unary signal)
+- anonymous broadcast network where nodes have no knowledge of topology or size
+- in each time slot, a node can either beep or be silent
+- beeping nodes cannot determine if other nodes beeped as well
+- silent nodes can only differentiate between no neighbors beeping or at least one neighbors beeping
 
 fly brains: developing fly brains select a subset of cells to become sensory bristles on the fly's forehead.
 
-- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
+- cell differentiation
 
 ### stone-age
 
-<img class="center" src="./stone-age.png" height="500" />
+<img class="center" src="./stone-age.png" height="450" />
 
 ???
 
-![](./slime-mold-routing.jpg)
+- also anonymous network
+- nodes can count up according to one-two-many principle
 
-> Foraging slime molds have also been shown to adaptively adjust their networks of tubular junctions based on the distribution and availability of food sources in the area, which is typically unknown a priori. 52
-> Slime molds also forage using breadth-first search using real cellular material, which is later pruned when optimal paths are found.  
+### example: slime mold
 
-- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
-- http://www.wired.com/2010/01/slime-mold-grows-network-just-like-tokyo-rail-system/
+slime mold forages for food with a routing network
+
+<img class="center" src="./slime-mold-routing.jpg" height="450" />
+
+???
+
+- forage for food using bread-first search with cellular material
+- network adapts by pruning when optimal paths are found
 
 ### population
 
@@ -161,78 +174,68 @@ harvester ants forage for food with Transmission Control Protocol (TCP)
 example:
 
 - human organism
-- -> organs
-- -> tissues
-- -> cells
-- -> organelles
-- -> large molecules
-- -> small molecules
-- -> atoms
-- -> particles
+- <- organs
+- <- tissues
+- <- cells
+- <- organelles
+- <- large molecules
+- <- small molecules
+- <- atoms
+- <- particles
 
 ???
 
-blood-brain barrier protects brain from bad actors.
+- individual
+- -> family
+- -> village
+- -> subhurb
+- -> city
+- -> region
+- -> state
 
-example: brains are composed of fractal agents
+### example: human brain
+
+brains are composed of fractal agents
+
+<img class="center" src="./agency-in-the-brain.png" height="450" />
+
+???
 
 > For our purposes, an agent is an entity capable of autonomous, intelligent, goal-directed behavior.
 
-![](agency-in-the-brain.png)
+### [small worlds](https://en.wikipedia.org/wiki/Small-world_network)
 
-> Thus there is, in this view, an internal 'economy' in the brain, in which neurons must compete with each other for resources. This design stands in contrast to the standard, Von Neumann computer architecture, whose parts never have to worry about where their energy is coming from. Without resource contention, there's no need for selfishness. And this is, in part, why computers are less flexible and adaptable — less plastic — than brains.
-
-???
-
-- http://www.meltingasphalt.com/neurons-gone-wild/
-- https://blog.dinosaur.is/life-as-a-holon/
-- Aida, K., Natsume, W. and Futakata, Y. Distributed computing with hierarchical master-worker paradigm for parallel branch and bound algorithm.  In Proceedings of the 31 st International Symposium on Cluster Computing and the Grid.  IEEE Computer Society, Washington, DC, 2003.  
-
-### small worlds
-
-![](./speed-vs-robustness.png)
-
-> A small-world network is a type of mathematical graph in which most nodes are not neighbors of one another, but most nodes can be reached from every other node by a small number of hops or steps
+<img class="center" src="./speed-vs-robustness.png" height="500" />
 
 ???
 
-> For example, dense topologies with clique-like structures are often used in instances where little-to-no noise is expected, whereas sparser topologies are preferred when networks are expected to face more noise.40
->
-> Of course, spars- er topologies are also less efficient (in terms of routing distance, for example) which means execution times will be longer for such topologies. Weakly linked modules, on the other hand, can isolate occasional noise into nearly independent modules that each per- form efficiently.56
+a small-world network is where most nodes are not neighbors, but most nodes can be reached by every other node by a small number of hops
 
-- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
+dense toplogies are used when little-to-no noise is expected, sparse toplogies are preferred when noise is expected.
 
-> Small-world properties are found in many real-world phenomena, including websites with navigation menus, food chains, electric power grids, metabolite processing networks, networks of brain neurons, voter networks, telephone call graphs, and social influence networks.
->
-> Networks of connected proteins have small world properties such as power-law obeying degree distributions.[9] Similarly transcriptional networks, in which the nodes are genes, and they are linked if one gene has an up or down-regulatory genetic influence on the other, have small world network properties.[10]
->
-> It is hypothesized by some researchers such as Barabási that the prevalence of small world networks in biological systems may reflect an evolutionary advantage of such an architecture. One possibility is that small-world networks are more robust to perturbations than other network architectures. If this were the case, it would provide an advantage to biological systems that are subject to damage by mutation or viral infection.
->
-> By contrast, in a random network, in which all nodes have roughly the same number of connections, deleting a random node is likely to increase the mean-shortest path length slightly but significantly for almost any node deleted. In this sense, random networks are vulnerable to random perturbations, whereas small-world networks are robust. However, small-world networks are vulnerable to targeted attack of hubs, whereas random networks cannot be targeted for catastrophic failure.
->
-> Appropriately, viruses have evolved to interfere with the activity of hub proteins such as p53, thereby bringing about the massive changes in cellular behavior which are conducive to viral replication.
+examples:
 
-https://en.wikipedia.org/wiki/Small-world_network
-
+- [Wikipedia game](http://thewikigame.com/)
+- 6 degrees of Kevin Bacon
+  - social influence networks
+- activity-dependent plasticity of synapses
+  - neural networks are shaped by environmental stimuli
+  - input streams into the neural network and changes the toplogy of how it is processed
 
 ### handling failure
 
 instead of using sophisticated consensus algorithms, nature uses toplogical features to handle failures.
 
-![](./toplogy-on-speed-and-robustness.png)
+<img class="center" src="./toplogy-on-speed-and-robustness.png" height="400" />
 
 ???
 
-example: viruses, cells 
+sparse toplogies are less efficient, but more resilient as can isolate problems by changing toplogy.
 
-> In distributed computing, failures have primarily been handled by majority voting methods, 37 by using dedicated failure detectors, 25 or via cryptography.  41 In contrast, most biological systems rely on various network topological features to handle failures.
+example:
 
-...
-
-> underlying network topology. For example, activity-dependent plasticity of synapses is a well-known phenomenon by which neural networks are shaped by environmental stimuli. These sig- nals are processed in a streaming fash- ion, and input patterns can change the topology of the networks designed to
-process them.
-
-- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
+- protection against viruses
+  - which is why viruses have evolved to interfere with activity of hub proteins such as p53
 
 ## global distributed networks
 
@@ -243,7 +246,6 @@ process them.
 - [cjdns project goals](https://docs.meshwith.me/project-goals.html)
 
 ???
-
 
 - Pakistani ISP uses BGP to blackhole internet
 
@@ -306,17 +308,9 @@ the world is converging on a uniform culture, at the expense of diversity.
 
 ???
 
-- https://github.com/RichardLitt/endangered-languages
-
-reality is neither objective nor global.
-
-> Westerners, he says, prefer to understand things as mechanisms, while the Chinese prefer to understand things as organisms — and these are two very different kinds of processes.
-
-- http://www.meltingasphalt.com/technical-debt-of-the-west/
-
-reality is subjective and local.
-
-- https://github.com/ssbc/secure-scuttlebutt/issues/86
+- endangered animals
+- [endangered languages](https://github.com/RichardLitt/endangered-languages)
+- [technical debt of the west](http://www.meltingasphalt.com/technical-debt-of-the-west/)
 
 ## local peer-to-peer networks
 
@@ -325,8 +319,6 @@ reality is subjective and local.
 > On the biological side, as technology continues to improve and sheds light on molecular and cellular decision-making, we believe computational perspectives will be essential to understand how local, distributed rules give rise to robust, global systems.
 
 ???
-
-- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 
 - planet ecology
 
@@ -339,14 +331,17 @@ reality is subjective and local.
 ### local agents
 
 - individual
-- professional
-  - [family](https://github.com/enspiral-root-systems)
-  - [community](http://devacademy.co.nz)
-  - [network](http://enspiral.com)
 - regional
   - subhurb
   - city
   - state
+- professional
+  - [family](https://github.com/enspiral-root-systems)
+  - [community](http://devacademy.co.nz)
+  - [network](http://enspiral.com)
+- interests
+  - [NodeSchool Wellington](http://nodeschool.io/wellington)
+  - [Art~Hack](https://www.facebook.com/groups/714447698702058/)
 
 ### subjective views
 
@@ -354,7 +349,11 @@ reality is subjective and local.
 - my parents call me Michael
 - i call myself dinosaur
 
-### gossip protocols
+???
+
+- [subjective data structures](https://github.com/ssbc/secure-scuttlebutt/issues/86)
+
+### [gossip protocols](https://en.wikipedia.org/wiki/Gossip_protocol)
 
 relay a message through who's local to you.
 
@@ -366,7 +365,6 @@ example: i run into Alice in town. "hey what's the lastest you've heard from Bob
 
 blockchain message gossip
 
-- https://en.wikipedia.org/wiki/Gossip_protocol
 - https://github.com/ssbc/scuttlebot
 - https://github.com/substack/swarmbot
 

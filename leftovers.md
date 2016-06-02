@@ -1,6 +1,4 @@
 # leftover content (notes)
-???
-
 
 ### example: global socio-economic networks
 
@@ -14,6 +12,24 @@ many of these mega-corps act as middleman within closed markets: Uber.
   - where middleman sets price for both supplier and consumer
   - workers on both sides assume all risk, no risk for middleman
 - winner-take-all effects of global networks (Uber)
+
+### example: brain
+
+blood-brain barrier protects brain from bad actors.
+
+example: brains are composed of fractal agents
+
+> For our purposes, an agent is an entity capable of autonomous, intelligent, goal-directed behavior.
+
+![](agency-in-the-brain.png)
+
+> Thus there is, in this view, an internal 'economy' in the brain, in which neurons must compete with each other for resources. This design stands in contrast to the standard, Von Neumann computer architecture, whose parts never have to worry about where their energy is coming from. Without resource contention, there's no need for selfishness. And this is, in part, why computers are less flexible and adaptable — less plastic — than brains.
+
+???
+
+- http://www.meltingasphalt.com/neurons-gone-wild/
+- https://blog.dinosaur.is/life-as-a-holon/
+- Aida, K., Natsume, W. and Futakata, Y. Distributed computing with hierarchical master-worker paradigm for parallel branch and bound algorithm.  In Proceedings of the 31 st International Symposium on Cluster Computing and the Grid.  IEEE Computer Society, Washington, DC, 2003.  
 
 ## agent trust networks
 
@@ -39,10 +55,13 @@ alpha wolf is boss of pack, not boss of all packs.
 
 large molecule doesn't get bonus and become organelle
 
-## other links
+## links
 
+- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
 - https://github.com/du5t/spaceship
 - http://artbrock.com/blog/perspectives-blockchains-and-cryptocurrencies
+- http://www.ribbonfarm.com/2015/03/04/gardens-need-walls-on-boundaries-ritual-and-beauty/
+- http://networkcultures.org/unlikeus/resources/articles/what-is-a-federated-network/
 
 ### example: B.A.T.M.A.N
 
