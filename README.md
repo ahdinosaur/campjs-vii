@@ -17,11 +17,9 @@ slides are available at <http://dinosaur.is/campjs-vii>.
 
 ???
 
-first time presenting at a conference
+first time presenting at a conference.
 
-i will use imprecise terminology
-
-much help from ["Distributed Information Processing in Biological and Computation Systems"](http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract) paper
+i will use imprecise terminology.
 
 ## overview
 
@@ -57,7 +55,7 @@ example: climate change
 
 ???
 
-distributed systems can be seen as attempts to solve coordination problems
+distributed systems can be seen as attempts to solve coordination problems.
 
 every intelligent person knows climate change is a problem to be solved.
 
@@ -92,21 +90,23 @@ yet biological systems coordinate:
 
 ???
 
-> Most biological systems are distributed and must make decisions and respond to stimuli without a centralized coordinator and under severe constraints (energy conservation, limited communication range, limited messaging language, among others)
-
-- http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract
+> [Most biological systems are distributed and must make decisions and respond to stimuli without a centralized coordinator and under severe constraints (energy conservation, limited communication range, limited messaging language, among others)](http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract)
 
 ## popular distributed networks
 
 ### [example: internet service providers](http://research.dyn.com/2010/11/chinas-18-minute-mystery/)
 
-> The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.
+> [The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.](https://docs.meshwith.me/project-goals.html)
 
-from [cjdns project goals](https://docs.meshwith.me/project-goals.html)
+even a Twitter feed of hijacks: [@bgpstream](https://twitter.com/bgpstream)
 
 ???
 
-- [Pakistani ISP uses BGP to blackhole internet](http://www.cnet.com/news/how-pakistan-knocked-youtube-offline-and-how-to-make-sure-it-never-happens-again/)
+- Border Gateway Protocol
+- any organization on the internet can send out a BGP message to its neighbors that says "hey, i own these IP addresses"
+- the neighbors can choose to believe it or not
+- good and diligent neighbors check for accuracy, but easy to pass checks
+- if believed by enough neighbors, the entire internet can be blackholed
 
 ### example: name registries
 
@@ -122,7 +122,7 @@ Namecoin distributes the protocol, but not the registry.
 
 i have phone with a radio, you have phone with a radio, we can't connect because a base station is down.
 
-peer -> middleman -> peer
+peer -> middleman (provider) -> peer
 
 ### example: buying a bicycle with Bitcoin
 
@@ -134,29 +134,26 @@ with Bitcoin, i have to send a message to random strangers (miners) to participa
 
 - cost of Bitcoin global consensus is large amounts of duplicate CPU work in Proof-of-Work cycles
 - within a very few degrees of trust separation from my neighbor, we could be doing local consensus
-- cost of Ethereum global computation is large amounts of duplicate memory and CPU work in computation cycles
 
-https://blog.dinosaur.is/global-vs-local-systems/
+<https://blog.dinosaur.is/global-vs-local-systems/>
+
+### example: twitter abuse
+
+since everyone is connected to everyone, there's no barrier to abusing someone on Twitter.
+
+???
+
+- open by default
+- the victim (defender) is the one who has to expend energy rather than offender.
+- also easy to spam
+  - email
+  - distributed hash tables
 
 ### example: downloading a file with Bittorrent
 
 when i download a file with Bittorrent, i connect to random strangers.
 
 this means it's easy to monitor who is downloading what.
-
-### example: twitter abuse
-
-since everyone is connected to everyone, there's no barrier to abusing someone on Twitter.
-
-the victim (defender) is the one who has to expend energy rather than offender.
-
-???
-
-open by default
-
-- also easy to spam
-  - email
-  - distributed hash tables
 
 ### example: monoculture
 
@@ -170,7 +167,6 @@ the world is converging on a uniform culture, at the expense of diversity.
 - endangered animals
 - [endangered languages](https://github.com/RichardLitt/endangered-languages)
 - [technical debt of the west](http://www.meltingasphalt.com/technical-debt-of-the-west/)
-
 
 ## natural distributed systems
 
@@ -297,7 +293,7 @@ brains are composed of fractal agents
 
 ### why local?
 
-> On the biological side, as technology continues to improve and sheds light on molecular and cellular decision-making, we believe computational perspectives will be essential to understand how local, distributed rules give rise to robust, global systems.
+in nature: local, distributed rules give rise to robust, global systems.
 
 ???
 
@@ -349,7 +345,7 @@ blockchain message gossip
 - https://github.com/ssbc/scuttlebot
 - https://github.com/substack/swarmbot
 
-### example: secure scuttlebutt (SSB)
+### example: [ssb](https://scuttlebot.io)
 
 peer-to-peer log store
 
@@ -363,7 +359,7 @@ peer-to-peer log store
 - private messages with the public key of the intended recipient
   - try to decrypt to see if it is for you
 
-### example: Patchwork
+### example: [Patchwork](https://ssbc.github.io/patchwork)
 
 peer-to-peer social network
 
