@@ -57,9 +57,13 @@ example: climate change
 
 distributed systems can be seen as attempts to solve coordination problems.
 
+a useful frame for understanding how good a distributed system is: "does it coordinate well?"
+
 every intelligent person knows climate change is a problem to be solved.
 
 yet we're not doing enough to solve it.
+
+so maybe our current social / political / economic system is not a good distributed system.
 
 ### why nature?
 
@@ -73,7 +77,7 @@ nature is better at distributed systems than we are.
 
 ???
 
-life is hard to kill: try killing the fungus spores in your fridge
+life is hard to kill: try killing the fungus spores in your fridge.
 
 there's no question that the planet will survive climate change,
 
@@ -113,13 +117,14 @@ even a Twitter feed of hijacks: [@bgpstream](https://twitter.com/bgpstream)
 - any organization on the internet can send out a BGP message to its neighbors that says "hey, i own these IP addresses"
 - the neighbors can choose to believe it or not
 - good and diligent neighbors check for accuracy, but easy to pass checks
-- if believed by enough neighbors, the entire internet can be blackholed
+- if believed by enough neighbors, the entire internet can be blackholed in mere seconds
+- the Internet has too few nodes, all our eggs are in one basket
 
 ### example: name registries
 
 DNS is a central name registry.
 
-Namecoin distributes the protocol, but not the registry.
+Namecoin distributes registration, but not the registry.
 
 ???
 
@@ -131,6 +136,14 @@ i have phone with a radio, you have phone with a radio, we can't connect because
 
 peer -> middleman (provider) -> peer
 
+???
+
+this pattern comes up way too often.
+
+- sharing economy (aka renting economy)
+  - examples: Uber, Airbnb
+- peers are at mercy of middleman
+
 ### example: buying a bicycle with Bitcoin
 
 let's say i'm buying a bicycle from a neighbor.
@@ -140,7 +153,7 @@ with Bitcoin, i have to send a message to random strangers (miners) to participa
 ???
 
 - cost of Bitcoin global consensus is large amounts of duplicate CPU work in Proof-of-Work cycles
-- within a very few degrees of trust separation from my neighbor, we could be doing local consensus
+- i'm within a very few degrees of trust separation from my neighbor, we could be doing local consensus
 
 <https://blog.dinosaur.is/global-vs-local-systems/>
 
@@ -152,9 +165,7 @@ since everyone is connected to everyone, there's no barrier to abusing someone o
 
 - open by default
 - the victim (defender) is the one who has to expend energy rather than offender.
-- also easy to spam
-  - email
-  - distributed hash tables
+- also easy to spam email and distributed hash tables
 
 ### example: downloading a file with Bittorrent
 
@@ -171,8 +182,10 @@ the world is converging on a uniform culture, at the expense of diversity.
 
 ???
 
-- endangered animals
-- [endangered languages](https://github.com/RichardLitt/endangered-languages)
+- global socio-economic system: eggs all in one basket again
+- diversity is dying:
+  - endangered animals
+  - [endangered languages](https://github.com/RichardLitt/endangered-languages)
 - [technical debt of the west](http://www.meltingasphalt.com/technical-debt-of-the-west/)
 
 ## natural distributed systems
@@ -186,6 +199,10 @@ the world is converging on a uniform culture, at the expense of diversity.
 rather than sophisticated synchronous protocols (like the OAuth dance),
 
 most natural systems communicate with simple asynchronous messages
+
+- beeps (unary messages)
+- little to no stored memory
+- one-two-many principle (count up to a threshold)
 
 ### randomized over deterministic
 
@@ -238,12 +255,16 @@ example:
 - <- tissues
 - <- cells
 - <- organelles
-- <- large molecules
-- <- small molecules
+- <- large molecules (proteins)
+- <- small molecules (amino acids)
 - <- atoms
 - <- particles
 
 ???
+
+holarchary
+
+different from a hierarchy: large molecule doesn't get bonus and become organelle.
 
 - individual
 - -> family
@@ -261,8 +282,9 @@ slime mold forages for food with a routing network
 
 ???
 
-- forage for food using bread-first search with cellular material
-- network adapts by pruning when optimal paths are found
+- many unicellular organisms coordinate to forage food
+- use bread-first search with cellular material
+- adapt by pruning when optimal paths are found
 
 ### [example: harvester ants](http://priceonomics.com/the-independent-discovery-of-tcpip-by-ants/)
 
@@ -301,6 +323,8 @@ brains are composed of fractal agents
 ### why local?
 
 in nature: local, distributed rules give rise to robust, global systems.
+
+<img alt="Great Barrier Reef" src="great-barrier-reef.jpg" />
 
 ???
 
