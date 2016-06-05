@@ -107,11 +107,15 @@ keep this biogical principle in mind.
 
 ### [example: internet service providers](http://research.dyn.com/2010/11/chinas-18-minute-mystery/)
 
-> [The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.](https://docs.meshwith.me/project-goals.html)
+the Internet is fragile, take for example the Border Gateway Protocol.
 
-even a Twitter feed of hijacks: [@bgpstream](https://twitter.com/bgpstream)
+malicious or incompetent ISPs can and have blackholed the Internet.
+
+even Twitter feed of hijacks: [@bgpstream](https://twitter.com/bgpstream)
 
 ???
+
+> [The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.](https://docs.meshwith.me/project-goals.html)
 
 - Border Gateway Protocol
 - any organization on the internet can send out a BGP message to its neighbors that says "hey, i own these IP addresses"
@@ -204,7 +208,7 @@ most natural systems communicate with simple asynchronous messages
 - little to no stored memory
 - one-two-many principle (count up to a threshold)
 
-### randomized over deterministic
+### [stochastic](https://en.wikipedia.org/wiki/Stochastic)
 
 <img class="center" src="./deterministic-vs-randomized-algorithms.png" height="500" />
 
@@ -269,14 +273,14 @@ different from a hierarchy: large molecule doesn't get bonus and become organell
 - individual
 - -> family
 - -> village
-- -> subhurb
+- -> suburb
 - -> city
 - -> region
 - -> state
 
 ### [example: slime mold](http://www.wired.com/2010/01/slime-mold-grows-network-just-like-tokyo-rail-system/)
 
-slime mold forages for food with a routing network
+forages food with a routing network
 
 <img class="center" src="./slime-mold-routing.jpg" height="450" />
 
@@ -286,12 +290,12 @@ slime mold forages for food with a routing network
 - use bread-first search with cellular material
 - adapt by pruning when optimal paths are found
 
-### [example: harvester ants](http://priceonomics.com/the-independent-discovery-of-tcpip-by-ants/)
+### [example: ants](http://priceonomics.com/the-independent-discovery-of-tcpip-by-ants/)
 
-harvester ants forage for food with Transmission Control Protocol (TCP)
+forages food with Transmission Control Protocol (TCP)
 
 <a href="https://www.flickr.com/photos/jurvetson/2067467/in/photostream//">
-  <img class="center" src="./ants.jpg" height="450" />
+  <img class="center" src="./ants.jpg" height="400" />
 </a>
 
 ???
@@ -304,8 +308,6 @@ harvester ants forage for food with Transmission Control Protocol (TCP)
 - if the rate of contact is high, food is plentiful, and thus outgoing ants leave at a faster rate
 
 ### example: human brain
-
-brains are composed of fractal agents
 
 <a href="http://www.meltingasphalt.com/neurons-gone-wild/">
   <img class="center" src="./agency-in-the-brain.png" height="450" />
@@ -340,22 +342,22 @@ in nature: local, distributed rules give rise to robust, global systems.
 
 - individual
 - regional
-  - subhurb
-  - city
-  - state
+  - suburb: Newtown
+  - city: Wellington
+  - state: New Zealand
 - professional
-  - [family](https://github.com/enspiral-root-systems)
-  - [community](http://devacademy.co.nz)
-  - [network](http://enspiral.com)
+  - family: [Root Systems](https://github.com/enspiral-root-systems)
+  - community: [Dev Academy](http://devacademy.co.nz)
+  - network: [Enspiral](http://enspiral.com)
 - interests
-  - [NodeSchool Wellington](http://nodeschool.io/wellington)
-  - [Art~Hack](https://www.facebook.com/groups/714447698702058/)
+  - meetup: [Art~Hack](https://www.facebook.com/groups/714447698702058/)
+  - open source: many GitHub orgs
 
 ### subjective views
 
+- i call myself dinosaur
 - my friends call me Mikey
 - my parents call me Michael
-- i call myself dinosaur
 
 ???
 
@@ -365,7 +367,7 @@ in nature: local, distributed rules give rise to robust, global systems.
 
 relay a message through who's local to you.
 
-example: i run into Alice in town. "hey what's the lastest you've heard from Bob?"
+example: i run into a friend in town. "hey what's the lastest you've heard from our mutual friends?"
 
 ???
 

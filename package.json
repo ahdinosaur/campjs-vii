@@ -5,6 +5,7 @@
   "description": "nature's best practices for distributed networks",
   "main": "index.js",
   "scripts": {
+    "present": "ecstatic .",
     "build": "markdown-to-slides -t campjs-vii-2016 -d README.md -o index.html -s index.css -j index.js -i",
     "watch": "npm run build -- -w",
     "livereload": "wtch -d . -e html,css,png,gif,jpg | garnish --level debug",
@@ -36,6 +37,7 @@
     "wtch": "^4.0.1"
   },
   "dependencies": {
+    "ecstatic": "^0.8.0",
     "markdown-to-slides": "^1.0.3"
   }
 }
