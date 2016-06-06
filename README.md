@@ -196,7 +196,9 @@ the world is converging on a uniform culture, at the expense of diversity.
 
 ### simple over complex
 
-<img class="center" src="./complex-vs-simple-communication.png" height="500" />
+<a href="http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract">
+  <img class="center" src="./complex-vs-simple-communication.png" height="500" />
+</a>
 
 ???
 
@@ -210,7 +212,9 @@ most natural systems communicate with simple asynchronous messages
 
 ### [stochastic](https://en.wikipedia.org/wiki/Stochastic)
 
-<img class="center" src="./deterministic-vs-randomized-algorithms.png" height="500" />
+<a href="http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract">
+  <img class="center" src="./deterministic-vs-randomized-algorithms.png" height="500" />
+</a>
 
 ???
 
@@ -218,7 +222,9 @@ most natural systems communicate with simple asynchronous messages
 
 ### [small world](https://en.wikipedia.org/wiki/Small-world_network) topology
 
-<img class="center" src="./speed-vs-robustness.png" height="500" />
+<a href="http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract">
+  <img class="center" src="./speed-vs-robustness.png" height="500" />
+</a>
 
 ???
 
@@ -239,7 +245,9 @@ examples:
 
 instead of using sophisticated consensus algorithms, nature uses toplogical features to handle failures.
 
-<img class="center" src="./toplogy-on-speed-and-robustness.png" height="400" />
+<a href="http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract">
+  <img class="center" src="./toplogy-on-speed-and-robustness.png" height="400" />
+</a>
 
 ???
 
@@ -282,7 +290,9 @@ different from a hierarchy: large molecule doesn't get bonus and become organell
 
 forages food with a routing network
 
-<img class="center" src="./slime-mold-routing.jpg" height="450" />
+<a href="http://cacm.acm.org/magazines/2015/1/181614-distributed-information-processing-in-biological-and-computational-systems/abstract">
+  <img class="center" src="./slime-mold-routing.jpg" height="450" />
+</a>
 
 ???
 
@@ -326,7 +336,7 @@ forages food with Transmission Control Protocol (TCP)
 
 in nature: local, distributed rules give rise to robust, global systems.
 
-<img alt="Great Barrier Reef" src="great-barrier-reef.jpg" />
+<img alt="Great Barrier Reef" src="./great-barrier-reef.jpg" />
 
 ???
 
