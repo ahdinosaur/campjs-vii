@@ -10,11 +10,21 @@
 h1, h2, h3 {
 	font-weight: 400;
 	margin-bottom: 0;
+        margin-top: 0.15em;
 }
-.remark-slide-content { font-size: 1.6em; }
-.remark-slide-content h1 { font-size: 4em; }
-.remark-slide-content h2 { font-size: 2.5em; }
-.remark-slide-content h3 { font-size: 1.8em; }
+.remark-slide-content {
+  font-size: 2.0em;
+  line-height: 1.2;
+}
+.remark-slide-content h1 {
+  font-size: 3.5em;
+}
+.remark-slide-content h2 {
+  font-size: 3em;
+}
+.remark-slide-content h3 {
+  font-size: 2.2em;
+}
 .footnote {
 	position: absolute;
 	bottom: 3em;
@@ -59,7 +69,7 @@ code {
 }
 .title h1, .title h2, .main-title h1, .main-title h2 {
 	color: #f3f3f3;
-	line-height: 0.8em;
+	line-height: 1.2em;
 }
 .remark-code {
 	display: block;
@@ -208,11 +218,15 @@ class: center, middle, title
 
 ---
 ### [example: internet service providers](http://research.dyn.com/2010/11/chinas-18-minute-mystery/)
-> [The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.](https://docs.meshwith.me/project-goals.html)
+the Internet is fragile, take for example the Border Gateway Protocol.
 
-even a Twitter feed of hijacks: [@bgpstream](https://twitter.com/bgpstream)
+malicious or incompetent ISPs can and have blackholed the Internet.
+
+even Twitter feed of hijacks: [@bgpstream](https://twitter.com/bgpstream)
 
 ???
+
+> [The very fabric of the Internet can be torn apart by a malicious ISP or even an honest mistake. On April 8th, 2010, an employee at China Telecom misconfigured a router - causing widespread Internet outages lasting up to fifteen minutes.](https://docs.meshwith.me/project-goals.html)
 
 
 - Border Gateway Protocol
@@ -325,7 +339,7 @@ most natural systems communicate with simple asynchronous messages
 
 
 ---
-### randomized over deterministic
+### [stochastic](https://en.wikipedia.org/wiki/Stochastic)
 <img class="center" src="./deterministic-vs-randomized-algorithms.png" height="500" />
 
 ???
@@ -396,7 +410,7 @@ different from a hierarchy: large molecule doesn&#39;t get bonus and become orga
 - individual
 -  -&gt; family
 -  -&gt; village
--  -&gt; subhurb
+-  -&gt; suburb
 -  -&gt; city
 -  -&gt; region
 -  -&gt; state
@@ -404,7 +418,7 @@ different from a hierarchy: large molecule doesn&#39;t get bonus and become orga
 
 ---
 ### [example: slime mold](http://www.wired.com/2010/01/slime-mold-grows-network-just-like-tokyo-rail-system/)
-slime mold forages for food with a routing network
+forages food with a routing network
 
 <img class="center" src="./slime-mold-routing.jpg" height="450" />
 
@@ -417,11 +431,11 @@ slime mold forages for food with a routing network
 
 
 ---
-### [example: harvester ants](http://priceonomics.com/the-independent-discovery-of-tcpip-by-ants/)
-harvester ants forage for food with Transmission Control Protocol (TCP)
+### [example: ants](http://priceonomics.com/the-independent-discovery-of-tcpip-by-ants/)
+forages food with Transmission Control Protocol (TCP)
 
 <a href="https://www.flickr.com/photos/jurvetson/2067467/in/photostream//">
-  <img class="center" src="./ants.jpg" height="450" />
+  <img class="center" src="./ants.jpg" height="400" />
 </a>
 
 ???
@@ -437,8 +451,6 @@ harvester ants forage for food with Transmission Control Protocol (TCP)
 
 ---
 ### example: human brain
-brains are composed of fractal agents
-
 <a href="http://www.meltingasphalt.com/neurons-gone-wild/">
   <img class="center" src="./agency-in-the-brain.png" height="450" />
 </a>
@@ -482,24 +494,24 @@ in nature: local, distributed rules give rise to robust, global systems.
 
 - individual
 - regional
- - subhurb
- - city
- - state
+ - suburb: Newtown
+ - city: Wellington
+ - state: New Zealand
 - professional
- - [family](https://github.com/enspiral-root-systems)
- - [community](http://devacademy.co.nz)
- - [network](http://enspiral.com)
+ - family: [Root Systems](https://github.com/enspiral-root-systems)
+ - community: [Dev Academy](http://devacademy.co.nz)
+ - network: [Enspiral](http://enspiral.com)
 - interests
- - [NodeSchool Wellington](http://nodeschool.io/wellington)
- - [Art~Hack](https://www.facebook.com/groups/714447698702058/)
+ - meetup: [Art~Hack](https://www.facebook.com/groups/714447698702058/)
+ - open source: many GitHub orgs
 
 
 ---
 ### subjective views
 
+- i call myself dinosaur
 - my friends call me Mikey
 - my parents call me Michael
-- i call myself dinosaur
 
 ???
 
@@ -511,7 +523,7 @@ in nature: local, distributed rules give rise to robust, global systems.
 ### [gossip protocols](https://en.wikipedia.org/wiki/Gossip_protocol)
 relay a message through who&#39;s local to you.
 
-example: i run into Alice in town. &quot;hey what&#39;s the lastest you&#39;ve heard from Bob?&quot;
+example: i run into a friend in town. &quot;hey what&#39;s the lastest you&#39;ve heard from our mutual friends?&quot;
 
 ???
 
