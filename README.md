@@ -1,5 +1,7 @@
 # nature's best practices for distributed systems
 
+[![video](./video.png)](https://youtu.be/EBM8RTlu6lU)
+
 ## hi
 
 i'm [Mikey (@ahdinosaur)](http://dinosaur.is) from [Enspiral](http://enspiral.com)
